@@ -33,17 +33,17 @@
 1. 在python官网中下载：https://www.python.org/downloads/，可以选择特定版本下载，本次实验使用3.10。
 2. 根据电脑操作系统下载对应版本。
 
-![image-20250620104126033](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620104126033.png)
+![image-20250620104126033](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620104126033.png)
 
 3. 一路next安装，记得加到环境变量中。
 
 4. 最后打开命令行输入python出现下图表示安装成功。
 
-![image-20250620104236485](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620104236485.png)
+![image-20250620104236485](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620104236485.png)
 
 5. 然后下载pycharm，因为我在之前的课程中使用过pycharm，下载的是老师给的版本，当然直接在官网下载安装也是可以的，这个版本可以使用破解版。
 
-![image-20250620104450987](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620104450987.png)
+![image-20250620104450987](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620104450987.png)
 
 6. 不破解使用免费的也是可以的。安装很简单就不展开了。
 
@@ -63,7 +63,7 @@ Anaconda包括Conda、Python以及一大堆安装好的工具包，比如：nump
 2. 因为我已经提前装好了，就不再展开了，如果有困难可以查看网站：[史上最全最详细的Anaconda安装教程-CSDN博客](https://blog.csdn.net/wq_ocean_/article/details/103889237)
 3. 安装好后命令行查看：
 
-![image-20250620105022939](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620105022939.png)
+![image-20250620105022939](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620105022939.png)
 
 ## 实验环境安装
 
@@ -71,7 +71,7 @@ Anaconda包括Conda、Python以及一大堆安装好的工具包，比如：nump
 
 1. 打开anaconda。
 
-![image-20250620105211271](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620105211271.png)
+![image-20250620105211271](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620105211271.png)
 
 2. 可以先添加一下清华镜像源，下载更快。
 
@@ -99,7 +99,7 @@ conda config --set show_channel_urls yes
 
    可以查看到下图：
 
-   ![image-20250620105703890](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620105703890.png)
+   ![image-20250620105703890](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620105703890.png)
 
 4. 输入指令激活环境。
 
@@ -122,20 +122,20 @@ conda config --set show_channel_urls yes
 
    可以查看当前环境下的包：
 
-   ![image-20250620110129856](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620110129856.png)
+   ![image-20250620110129856](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620110129856.png)
 
 7. 最后在pycharm中使用部署的环境即可。
 8. 进入pycharm中，点击右下角的解释器。
 
-![image-20250620110308749](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620110308749.png)
+![image-20250620110308749](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620110308749.png)
 
 9. 添加解释器，选择现有环境。
 
-![image-20250620110510327](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620110510327.png)
+![image-20250620110510327](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620110510327.png)
 
 10. 点击旁边的三个点，找到目录 `D:\Anaconda3\envs\DigitalImageProcess\python.exe`，前面是你自己安装的anaconda的目录，后面envs\projectname\python.exe是一样的。
 
-![image-20250620110639782](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620110639782.png)
+![image-20250620110639782](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620110639782.png)
 
 11. 确定即可。
 
