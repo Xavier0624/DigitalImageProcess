@@ -153,7 +153,7 @@ edges = cv.Canny( image, threshold1, threshold2[, apertureSize[, L2gradient]])
 
 然后进行膨胀操作，膨胀操作的目的在于，如果纸张的外轮廓不是很明显，Canny边缘检测后纸张外轮廓不连续有小洞，使用膨胀操作填充小洞。结果图如下：
 
-![image-20250620091055344](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620091055344.png)
+![image-20250620091055344](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620091055344.png)
 
 ```
 cv2.dilate(img, kernel, iteration)
@@ -176,11 +176,11 @@ cv2.drawContours(image, contours, contourIdx, color, thickness=None, lineType=No
 
 排序获得最大的轮廓并绘制在源图像上，结果如图：
 
-![image-20250620092037691](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620092037691.png)
+![image-20250620092037691](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620092037691.png)
 
 自适应轮廓近似，自适应轮廓近似中取`epsilon = 0.0001 * 周长`，直到结果轮廓中只有四个点，结果如图：
 
-![image-20250620092252113](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620092252113.png)
+![image-20250620092252113](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620092252113.png)
 
 ## Step 3 透视变幻
 
@@ -240,7 +240,7 @@ dst = warpPerspective(src, M, dsize[, flags[, borderMode[, borderValue]]])
 
 得到结果如下图：
 
-![image-20250620093746864](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620093746864.png)
+![image-20250620093746864](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620093746864.png)
 
 ## Step 4 预处理
 
@@ -253,7 +253,7 @@ dst=retval.apply(src)
 
 结果如下：
 
-![image-20250620094129978](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620094129978.png)
+![image-20250620094129978](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620094129978.png)
 
  然后进行自适应二值化：
 
@@ -263,7 +263,7 @@ thresh,result=cv2.threshold (src, thresh, maxval, type)
 
 结果如下图：
 
-![image-20250620094352496](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620094352496.png)
+![image-20250620094352496](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620094352496.png)
 
 但进行完二值化的图片还有一个问题，就是在涂答题卡的时候，如果没有涂的饱满， 就可能会造成检测结果不准确，所以为了使检测结果更加准确，还需要进行*闭运算*操作：
 
@@ -275,13 +275,13 @@ cv2.morphologyEx(img, op, kernel)
 
 运行结果如下：
 
-![image-20250620094638058](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620094638058.png)
+![image-20250620094638058](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620094638058.png)
 
 ## Step 5 轮廓检测与过滤
 
 上面提到过这里用到的函数，运行结果如下图：
 
-![image-20250620094759300](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620094759300.png)
+![image-20250620094759300](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620094759300.png)
 
 可以看到提取到了很多轮廓，其中很多都是我们不需要的轮廓，于是我们需要使用一些过滤算法，把我们需要的轮廓（25个椭圆）保留下来 这里的过滤算法步骤如下所示：
 
@@ -291,11 +291,11 @@ cv2.morphologyEx(img, op, kernel)
 
 结果如下：
 
-![image-20250620095343522](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620095343522.png)
+![image-20250620095343522](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620095343522.png)
 
 在此之后我们就得到了所有比较像椭圆的轮廓，但是这还不够，因为有一些用于装订的椭圆也被保留了下来，可以观察到 这些用于装订的椭圆的特征是他们的面积比答题的椭圆要小得多，于是我们对所有轮廓进行排序，`key = 轮廓的面积` 然后将面积比较小的通过特定算法过滤掉。结果如下：
 
-![image-20250620095523334](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620095523334.png)
+![image-20250620095523334](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620095523334.png)
 
 ## Step 6 排序+检测
 
@@ -334,4 +334,4 @@ print(ANS)
 
 运行结果如下图：
 
-![image-20250620100010658](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620100010658.png)
+![image-20250620100010658](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620100010658.png)
