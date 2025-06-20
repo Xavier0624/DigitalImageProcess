@@ -149,7 +149,7 @@ edges = cv.Canny( image, threshold1, threshold2[, apertureSize[, L2gradient]])
 
 阈值使用80~150，获得结果图片如下：
 
-![image-20250620090849865](C:\Users\32471\AppData\Roaming\Typora\typora-user-images\image-20250620090849865.png)
+![image-20250620090849865](https://github.com/Xavier0624/DigitalImageProcess/blob/main/pic/image-20250620090849865.png)
 
 然后进行膨胀操作，膨胀操作的目的在于，如果纸张的外轮廓不是很明显，Canny边缘检测后纸张外轮廓不连续有小洞，使用膨胀操作填充小洞。结果图如下：
 
